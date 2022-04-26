@@ -1,5 +1,6 @@
 package com.udemy.spring.springselenium;
 
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,14 +25,21 @@ class SpringSeleniumApplicationTests {
     @Value("${myusername}")
     private String username;
 
+    @Autowired
+    private Faker faker;
+
+    @Autowired
+    private Television tv;
     @Test
     void contextLoads() {
 //        System.out.println(this.fruits);
 //        System.out.println(this.fruits.size());
 //        System.out.println(this.timeout);
-  System.out.println(this.path);
+  //System.out.println(this.path);
 
-        // user.printDetails();
+     // user.printDetails();
+     //   System.out.println(this.faker.name().firstName());
+        this.tv.playMovie();
     }
 /*
 	Address address = new Address();

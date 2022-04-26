@@ -10,7 +10,7 @@ public class User {
     private Address address;
 
     @Autowired
-    private Salary salary;
+    private Salary1 salary1;
 
 //    @Autowired
 //    public void setAddress(Address address) {
@@ -31,6 +31,6 @@ public class User {
 
     public void printDetails(){
         System.out.println("Address:" +this.address.getStreet());
-        System.out.println("Salary:" +this.salary.getAmount());
+        System.out.println("Salary:" +this.salary1.getAmount());
     }
 }

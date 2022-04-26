@@ -11,22 +11,22 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class Google1Test extends SpringBaseTestNGTest {
+public class Google2Test extends SpringBaseTestNGTest {
 
     @LazyAutowired
     private GooglePage googlePage;
 
-  @LazyAutowired
+   @LazyAutowired
     private ScreenshotService screenShotUtil;
 
     @Test
     public void googleTest() throws IOException {
         this.googlePage.goTo();
         Assert.assertTrue(this.googlePage.isAt());
-        this.googlePage.getSearchComponent().search("spring boot");
+        this.googlePage.getSearchComponent().search("selenium");
         Assert.assertTrue(this.googlePage.getSearchResult().isAt());
         Assert.assertTrue(this.googlePage.getSearchResult().getCount()>2);
-     this.screenShotUtil.takeScreenshot();
+        this.screenShotUtil.takeScreenshot();
         this.googlePage.close();
     }
 }
